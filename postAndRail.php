@@ -1,13 +1,11 @@
 <?php
-$rail = 1;
+$rail = 63;
 $post = $rail + 1;
 
 $postWidth = 0.10;
 $railLength = 1.5;
 
-$fenceLength = 100;
-
-$x = 0;
+$fenceLength = 0;
 
 if ($rail >= 1) {
     function fenceLengthCalculator($postWidth, $railLength, $post, $rail)
@@ -16,16 +14,16 @@ if ($rail >= 1) {
         return (($rail * $railLength) + ($post * $postWidth));
     }
 
-    ;
+    $maxFenceLength = fenceLengthCalculator($postWidth, $railLength, $post, $rail);
+    echo $maxFenceLength;
 
+} else {
 
-    echo $fenceLength = fenceLengthCalculator($rail, $railLength, $post, $postWidth, $x);
-} elseif ($rail == 0) {
-    function railNumberCalculator($fenceLength, $postWidth, $railLength, $railNumber = 0)
+    function railNumberCalculator($fenceLength, $postWidth, $railLength, $rail = 0)
     {
         return ($fenceLength - $postWidth) / ($postWidth + $railLength);
     }
 
-    echo $railNumber = ceil(railNumberCalculator($fenceLength, $postWidth, $railLength));
-    echo $postNumber = $railNumber + 1;
+    echo $maxRailNumber = ceil(railNumberCalculator($fenceLength, $postWidth, $railLength, $rail));
+    echo $maxPostNumber = $maxRailNumber + 1;
 }
