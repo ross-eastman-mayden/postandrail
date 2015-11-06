@@ -1,18 +1,23 @@
 <?php
 
-$post = 11;
+$post = 10;
 $rail = 10;
 
-$postLength = 10;
-$railLength = 20;
+$postWidth = 0.1;
+$railLength = 1.5;
 $x = 0;
 
-function fenceLengthCalculator($postLength, $railLength, $post, $rail)
+function fenceLengthCalculator($postWidth, $railLength, $post, $rail)
 {
-    return (($rail * $railLength) + ($post * $postLength));
+    return (($rail * $railLength) + (($post + 1) * $postWidth));
 };
 
 
-var_dump(fenceLengthCalculator($rail, $railLength, $post, $postLength, $x));
+var_dump(fenceLengthCalculator($rail, $railLength, $post, $postWidth, $x));
 
+
+function postAndRailCalculator($fenceLength)
+{
+    return ;
+};
 
