@@ -5,7 +5,7 @@ $post = $rail + 1;
 $postWidth = 0.10;
 $railLength = 1.5;
 
-$fenceLength = 50;
+$fenceLength = 0;
 
 if ($rail >= 1) {
     function fenceLengthCalculator($postWidth, $railLength, $post, $rail)
