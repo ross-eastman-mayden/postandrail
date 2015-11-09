@@ -1,5 +1,5 @@
 <?php
-$rail = 63;
+$rail = 0;
 $post = $rail + 1;
 
 $postWidth = 0.10;
@@ -24,6 +24,6 @@ if ($rail >= 1) {
         return ($fenceLength - $postWidth) / ($postWidth + $railLength);
     }
 
-    echo $maxRailNumber = ceil(railNumberCalculator($fenceLength, $postWidth, $railLength, $rail));
-    echo $maxPostNumber = $maxRailNumber + 1;
+    echo $maxRailNumber = ceil(railNumberCalculator($fenceLength, $postWidth, $railLength, $rail)) . "</br>";
+    echo $maxPostNumber = $maxRailNumber + 1  . "</br>";
 }
