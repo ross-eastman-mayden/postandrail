@@ -1,12 +1,12 @@
 <?php
-$rail = 4
-;
-$post = $rail + 1;
+
+$_POST['rails'] = $rail;
+$_POST['posts'] = $post;
 
 $postWidth = 0.10;
 $railLength = 1.5;
 
-$fenceLength = 0;
+$_POST['fencelength'] = $fenceLength;
 
 if ($rail >= 1) {
     /**
